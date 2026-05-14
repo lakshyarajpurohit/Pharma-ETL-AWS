@@ -1,0 +1,135 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#0f1117" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">💊 Pharma Portfolio Performance Monitor</text>
+  <text x="450" y="62" text-anchor="middle" fill="#6b7280" font-size="12">AWS End-to-End Data Engineering Pipeline</text>
+
+  <!-- ── STEP 1: CSV Source ── -->
+  <rect x="370" y="85" width="160" height="52" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="450" y="106" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="bold">📄 salesdaily.csv</text>
+  <text x="450" y="122" text-anchor="middle" fill="#64748b" font-size="10">Kaggle Pharma Dataset</text>
+  <text x="450" y="135" text-anchor="middle" fill="#64748b" font-size="10">2,106 rows | 2014–2019</text>
+
+  <!-- Arrow 1 -->
+  <line x1="450" y1="137" x2="450" y2="158" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- ── STEP 2: S3 Raw ── -->
+  <rect x="340" y="160" width="220" height="52" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="181" text-anchor="middle" fill="#fcd34d" font-size="11" font-weight="bold">🪣 AWS S3 — Raw Layer</text>
+  <text x="450" y="197" text-anchor="middle" fill="#64748b" font-size="10">s3://pharma-sales-pipeline/raw/</text>
+  <text x="450" y="210" text-anchor="middle" fill="#64748b" font-size="10">CSV ingestion zone</text>
+
+  <!-- Arrow 2 -->
+  <line x1="450" y1="212" x2="450" y2="233" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+  <!-- ── STEP 3: Lambda ── -->
+  <rect x="340" y="235" width="220" height="52" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="450" y="256" text-anchor="middle" fill="#c4b5fd" font-size="11" font-weight="bold">⚡ AWS Lambda</text>
+  <text x="450" y="272" text-anchor="middle" fill="#64748b" font-size="10">Event-driven trigger on S3 PUT</text>
+  <text x="450" y="285" text-anchor="middle" fill="#64748b" font-size="10">Auto-fires Glue ETL job</text>
+
+  <!-- Arrow 3 -->
+  <line x1="450" y1="287" x2="450" y2="308" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- ── STEP 4: Glue ETL ── -->
+  <rect x="290" y="310" width="320" height="100" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="450" y="332" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">⚙️ AWS Glue ETL — PySpark</text>
+  <line x1="300" y1="340" x2="600" y2="340" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Glue sub items -->
+  <text x="310" y="358" fill="#9ca3af" font-size="10">✦ Therapy area grouping (4 categories)</text>
+  <text x="310" y="373" fill="#9ca3af" font-size="10">✦ Performance flag (80% baseline)</text>
+  <text x="310" y="388" fill="#9ca3af" font-size="10">✦ Quarter + day type classification</text>
+  <text x="310" y="403" fill="#9ca3af" font-size="10">✦ 9-point data quality checks</text>
+
+  <!-- Arrow 4 -->
+  <line x1="450" y1="410" x2="450" y2="428" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <!-- ── STEP 5: S3 Processed ── -->
+  <rect x="270" y="430" width="360" height="65" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="451" text-anchor="middle" fill="#fcd34d" font-size="11" font-weight="bold">🪣 AWS S3 — Processed Layer</text>
+  <text x="310" y="470" fill="#64748b" font-size="10">📁 daily_enriched/</text>
+  <text x="430" y="470" fill="#64748b" font-size="10">📁 monthly_summary/</text>
+  <text x="565" y="470" fill="#64748b" font-size="10">📁 quality_reports/</text>
+  <text x="450" y="488" text-anchor="middle" fill="#374151" font-size="10">Parquet format | Glue Data Catalog</text>
+
+  <!-- Arrow 5 -->
+  <line x1="450" y1="495" x2="450" y2="513" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+  <!-- ── STEP 6: Athena ── -->
+  <rect x="310" y="515" width="280" height="52" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="450" y="536" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="bold">🔍 AWS Athena — SQL Analytics</text>
+  <text x="450" y="552" text-anchor="middle" fill="#64748b" font-size="10">6 business queries | YoY, Pareto, Decline</text>
+  <text x="450" y="565" text-anchor="middle" fill="#64748b" font-size="10">Weekend patterns | Underperformance alerts</text>
+
+  <!-- Arrow 6 -->
+  <line x1="450" y1="567" x2="450" y2="585" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-sky)"/>
+
+  <!-- ── STEP 7: Streamlit ── -->
+  <rect x="330" y="587" width="240" height="24" rx="8" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="450" y="603" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="bold">📊 Streamlit Live Dashboard</text>
+
+  <!-- ── Right Side: Tech Stack Labels ── -->
+  <rect x="720" y="85" width="155" height="260" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="797" y="108" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="bold">Tech Stack</text>
+  <line x1="730" y1="115" x2="865" y2="115" stroke="#1f2937" stroke-width="1"/>
+  <text x="730" y="133" fill="#6ee7b7" font-size="10">✅ Python 3.12</text>
+  <text x="730" y="151" fill="#6ee7b7" font-size="10">✅ PySpark (Glue 5.1)</text>
+  <text x="730" y="169" fill="#fcd34d" font-size="10">✅ AWS S3</text>
+  <text x="730" y="187" fill="#c4b5fd" font-size="10">✅ AWS Lambda</text>
+  <text x="730" y="205" fill="#6ee7b7" font-size="10">✅ AWS Glue</text>
+  <text x="730" y="223" fill="#7dd3fc" font-size="10">✅ AWS Athena</text>
+  <text x="730" y="241" fill="#fca5a5" font-size="10">✅ IAM Roles</text>
+  <text x="730" y="259" fill="#7dd3fc" font-size="10">✅ Streamlit</text>
+  <text x="730" y="277" fill="#9ca3af" font-size="10">✅ Parquet format</text>
+  <text x="730" y="295" fill="#9ca3af" font-size="10">✅ Glue Data Catalog</text>
+  <text x="730" y="313" fill="#9ca3af" font-size="10">✅ CloudWatch Logs</text>
+
+  <!-- ── Left Side: Business Insights ── -->
+  <rect x="20" y="85" width="175" height="260" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="107" y="108" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="bold">Business Insights</text>
+  <line x1="30" y1="115" x2="185" y2="115" stroke="#1f2937" stroke-width="1"/>
+  <text x="30" y="135" fill="#fcd34d" font-size="10">📈 YoY Revenue Growth</text>
+  <text x="30" y="155" fill="#fcd34d" font-size="10">🏆 Therapy Area Pareto</text>
+  <text x="30" y="175" fill="#fcd34d" font-size="10">📉 Decline Detection</text>
+  <text x="30" y="195" fill="#fcd34d" font-size="10">⚠️ Underperformance Alert</text>
+  <text x="30" y="215" fill="#fcd34d" font-size="10">🗓️ Weekend vs Weekday</text>
+  <text x="30" y="235" fill="#fcd34d" font-size="10">🔍 Data Quality (9 checks)</text>
+  <line x1="30" y1="248" x2="185" y2="248" stroke="#1f2937" stroke-width="1"/>
+  <text x="107" y="265" text-anchor="middle" fill="#9ca3af" font-size="10">Data Coverage</text>
+  <text x="107" y="282" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">2,106 Records</text>
+  <text x="107" y="299" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">6 Years (2014–2019)</text>
+  <text x="107" y="316" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">4 Therapy Areas</text>
+
+  <!-- ── Quality Badges bottom left ── -->
+  <rect x="20" y="430" width="175" height="110" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+  <text x="107" y="452" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="bold">Quality Report</text>
+  <line x1="30" y1="458" x2="185" y2="458" stroke="#1f2937" stroke-width="1"/>
+  <text x="30" y="476" fill="#6ee7b7" font-size="10">✅ Null dates: 0 — PASS</text>
+  <text x="30" y="494" fill="#6ee7b7" font-size="10">✅ Duplicates: 0 — PASS</text>
+  <text x="30" y="512" fill="#6ee7b7" font-size="10">✅ Negative values: 0 — PASS</text>
+  <text x="30" y="530" fill="#fbbf24" font-size="10">⚠️ Zero sales days: 26 — WARN</text>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-sky" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+</svg>
