@@ -166,13 +166,13 @@ pharma-sales-pipeline/
 ├── architecture_diagram.svg  ← Pipeline architecture
 ├── requirements.txt          ← Python dependencies
 ├── data/
-│   ├── yoy_growth.csv
-│   ├── revenue_updated.csv
-│   ├── declining_months.csv
-│   ├── weekend_pattern_updated.csv
-│   ├── quarterly_rank.csv
-│   ├── underperformance_updated.csv
-│   └── quality_report.csv
+│   ├── YOY_growth.csv
+│   ├── Revenue.csv
+│   ├── Declining_months.csv
+│   ├── Weekend_pattern.csv
+│   ├── Quarterly_rank.csv
+│   ├── Underperformance.csv
+│   └── Quality_report.csv
 └── README.md
 ```
 
@@ -181,9 +181,21 @@ pharma-sales-pipeline/
 ## 🚀 How to Run Locally
 
 ```bash
-# Clone the repo
-git clone https://github.com/YOURUSERNAME/pharma-sales-pipeline.git
-cd pharma-sales-pipeline
+# Clone the repository
+git clone https://github.com/lakshyarajpurohit/Pharma-ETL-AWS.git
+
+# Navigate into the project directory
+cd Pharma-ETL-AWS
+
+# Create virtual environment using pipenv
+# Install Pipenv (if you haven't already)
+pip install pipenv
+
+# Install the required dependencies from the Pipfile
+pipenv install
+
+# Activate the project's virtual environment
+pipenv shell
 
 # Install dependencies
 pip install -r requirements.txt
@@ -208,7 +220,7 @@ streamlit run app.py
 
 ## 📈 Live Dashboard
 
-🔗 **[View Live Dashboard](https://yourname-pharma-pipeline.streamlit.app)**
+🔗 **[View Live Dashboard](https://pharma-etl-aws-akixxrj6qhca8ggzwqjygw.streamlit.app/)**
 
 ---
 
@@ -216,4 +228,4 @@ streamlit run app.py
 
 **Lakshya Rajpurohit**
 Data Engineering | AWS | Python | PySpark
-📧 [lakshyar819@gmail.com] | 🔗 [https://www.linkedin.com/in/lakshya-rajpurohit-1a5869225/] | 💻 [GitHub]
+📧 [lakshyar819@gmail.com] | 🔗 [https://www.linkedin.com/in/lakshya-rajpurohit-1a5869225/] | 💻 [https://github.com/lakshyarajpurohit]
